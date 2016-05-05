@@ -1,11 +1,14 @@
 angular.module("starwars-app")
-    .controller("HomeController", function(StarWarsService){
+    .controller("HomeController", function(starWarsApi){
         
         var hc = this;
-        hc.people = StarWarsService.getPeople();
         
-        console.log(hc.people)
-        console.log(hc.people.$$state.value) //doesn't work
+        starWarsApi.getPeople(1).then(function(dataPromiseIThink){
+            hc.people = dataPromiseIThink.results;
+        })
+        
+        
+        
         
         hc.testVar = "Home controller working"
         
