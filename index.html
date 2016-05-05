@@ -1,0 +1,37 @@
+<html ng-app="starwars-app">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars Characters</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <section class="row">
+            <div class="col-md-12">
+                <h3>Header Heady Head Head</h3>
+            </div>
+        </section>
+        
+        <section class="row">
+            
+            <ui-view></ui-view>
+            
+        </section>
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app/app.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app/router/starwars-router.js"></script>
+    <script src="app/home/home-controller.js"></script>
+    <script src="app/starwars-service.js"></script>
+</body>
+</html>
